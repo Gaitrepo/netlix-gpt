@@ -16,7 +16,7 @@ const Login = () => {
           alt="logo"
         />
       </div>
-      <form className="absolute w-3/12 p-12 bg-black my-60 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-65">
+      <form className=" absolute w-3/12 p-12 bg-black my-60 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-65">
         
         <h1 className="font-bold text-3xl py-4">{isSignInForm? "Sign In":"Sign Up"} </h1>
         {!isSignInForm && <input type="text" placeholder="Full Name" className="p-4 m-4 w-full bg-gray-700" /> }
