@@ -6,14 +6,23 @@
 
 -configure routing npm i -D react-router-dom
 -Header
+-Routing of App
 
 Login Forms
  -Form Implementation
 
 -SignUp FOrm
+-Form validation
 
-
-
+-useRef Hook
+-Use GoogleFireBase Setup
+-Deploy to production
+-Create SignUp User Account
+Implement Sign In User Api
+-Creater Resdux store with userSlice
+-ImplementedSIgnOUt
+-Update Profile APi
+-Ftach Movies from TMBD Movies
 # Features
 
 -login/SIgnUp page
