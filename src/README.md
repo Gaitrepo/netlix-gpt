@@ -23,6 +23,26 @@ Implement Sign In User Api
 -ImplementedSIgnOUt
 -Update Profile APi
 -Ftach Movies from TMBD Movies
+-Bug FIxes:
+ -signUp user displayName and profile picture update
+ - if user not loggedIn redirect /browse to login page. and vice versa
+  -and if user loggedIn trying to go to login page redirect to browse page
+
+  -UnSubscribe authstatechange callack
+  -Add hardcoded values to constant files
+  -Register to TMBD API and create an app and get access tokenDaata
+  -Get data from TMBD playMovieNow API
+  -custom hook for NowPlayingMovies
+  -create MovieSlice
+  -Update store with movies data
+  -Planning for maincontainer and secondary container
+  -Fetch data foe trailor video
+  -Update store with trailor video data
+  -Embedded the youtube video and make it autoplay and mute
+  -Tailwind classes added to make maincontainer look awesome
+  -
+
+
 # Features
 
 -login/SIgnUp page

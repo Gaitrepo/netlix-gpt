@@ -3,10 +3,11 @@ import Header from "./Header";
 import { validateData } from "../utils/validate";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState("true");
@@ -17,7 +18,7 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const name=useRef(null);
-  const navigate=useNavigate();
+  // const navigate=useNavigate();
 
   const dispatch=useDispatch();
   const handleButtonClick = () => {
@@ -41,11 +42,11 @@ const Login = () => {
           // Signed up
           const user = userCredential.user;
           updateProfile(user, {
-            displayName: name.current.value, photoURL: "https://scontent.fpat3-1.fna.fbcdn.net/v/t1.6435-1/61675222_306675743609844_8616397796771102720_n.jpg?stp=c16.0.40.40a_cp0_dst-jpg_p40x40&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=C9t34rQ9VtMQ7kNvgEXl5O1&_nc_ht=scontent.fpat3-1.fna&oh=00_AYA1WSCmb6jn5urO3Vwmidymr8fcHuWs8iw5hRnMoeUrTQ&oe=66893C4E"
+            displayName: name.current.value, photoURL: USER_AVATAR
           }).then(() => {
             const {uid,email,displayName,photoURL} = auth.currentUser;
           dispatch(addUser({uid:uid,email:email,displayName:displayName, photoURL:photoURL}));
-            navigate("/browse");
+            // navigate("/browse");
             // ...
           }).catch((error) => {
             // An error occurred
@@ -53,7 +54,7 @@ const Login = () => {
             setErrorMessage(error.message);
           });
           console.log(user);
-          navigate("/browse");
+          // navigate("/browse");
           // ...
         })
         .catch((error) => {
@@ -69,7 +70,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
+          // navigate("/browse");
           // ...
         })
         .catch((error) => {
@@ -89,7 +90,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/dd4dfce3-1a39-4b1a-8e19-b7242da17e68/86742114-c001-4800-a127-c9c89ca7bbe4/IN-en-20240527-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          src={USER_AVATAR}
           alt="logo"
         />
       </div>
