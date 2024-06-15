@@ -40,7 +40,10 @@ Implement Sign In User Api
   -Update store with trailor video data
   -Embedded the youtube video and make it autoplay and mute
   -Tailwind classes added to make maincontainer look awesome
-  -
+  -GPt search feature 
+  -Gpt Search Page
+  -GPT search bar
+  -Multi language feature on our app
 
 
 # Features
